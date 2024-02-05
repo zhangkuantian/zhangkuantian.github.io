@@ -1,3 +1,24 @@
-site_name: kuantian.zhang's bolg
+site_name: 我的工作学习生活笔记
+repo_name: hellowac的个人博客
+repo_url: https://github.com/hellowac/hellowac.github.io/
+site_description: hellowac的工作学习生活笔记
+
+# 配置主题，在mkdocs.yml文件下
 theme:
-  name: material
+    name: material
+    custom_dir: overrides
+    language: zh
+    palette: # 文档颜色, https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+        scheme: default # 配色方案
+        primary: default # 主色
+        accent: red # 强调色
+    features:
+        - content.code.copy # 代码支持拷贝
+        - content.tabs.link # 内容tabs支持  https://squidfunk.github.io/mkdocs-material/reference/content-tabs/
+        - navigation.tabs # 顶部导航
+        - navigation.tabs.sticky # 顶部导航粘连
+        - navigation.indexes # 导航index页面支持
+        # - navigation.sections # 全部展开(非折叠状态)
+        # - navigation.expand # 子目录展开
+        - navigation.top # 返回顶部按钮
+        - toc.follow # 页面目录支持
