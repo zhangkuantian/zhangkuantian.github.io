@@ -1,183 +1,47 @@
-# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
-#[Info]
 site_name: zhangkuantian's Web
-site_url: https://zhangkuantian.github.io/
-site_author: zhangkuantian
-#[UI]
 theme:
   name: material
-  custom_dir: docs/overrides
-  # custom_dir: material/.overrides
-  # font:
-  #   text: Bitter
-  #   code: Roboto Mono
-  logo: https://raw.githubusercontent.com/zhangkuantian/design_docs/main/zhushou.png
-
-  favicon: zhushou.png
-  # img/11.ico
-  palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default # 日间模式
-      primary: blue grey # 上方的
-      accent: indigo # 链接等可交互元件的高亮色
-      # teal 
-      toggle:
-        icon: material/toggle-switch # 图标
-        name: 切换至夜间模式 # 鼠标悬浮提示
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate # 夜间模式
-      primary: black 
-      accent: indigo
-      # teal
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: 切换至日间模式
-  features: 
-    - announce.dismiss #呈现可标记为由用户读取的临时公告，可以包含一个用于取消当前公告的按钮
-    # - navigation.instant 
-    #- header.autohide  #自动隐藏
-    - navigation.tracking #地址栏中的 URL 将自动更新为在目录中突出显示的活动锚点
-    - navigation.tabs #顶级部分将呈现在上面视口标题下方的菜单层中，但在移动设备上保持原样
-    # - navigation.tabs.sticky  #启用粘性选项卡后，导航选项卡将锁定在标题下方，并在向下滚动时始终保持可见
-    - navigation.sections #启用部分后，顶级部分在边栏中呈现为1220px以上视口的组，但在移动设备上保持原样
-    - navigation.top # 返回顶部的按钮 在上滑时出现
-    - navigation.footer #页脚将呈现在边栏中，但在移动设备上保持原样
-    - search.suggest # 搜索输入一些字母时推荐补全整个单词
-    - search.highlight # 搜索出的文章关键词加入高亮
-    - search.share #搜索分享按钮
-    - navigation.expand # 打开Tab时左侧目录全部展开
-    - navigation.indexes #启用节索引页后，可以将文档直接附加到节
-    - content.tabs.link
-    - content.tooltips
-    - content.code.copy
-    - content.action.edit
-    - content.action.view
-    - content.code.annotate 
-  language: zh # 一些提示性的文字会变成中文
-  icon:
-    repo: fontawesome/brands/github #右上角图标
-    
-edit_uri: edit/main/docs # 编辑按钮跳转的链接 
-repo_url: https://github.com/zhangkuantian/zhangkuantian.github.io # 右上角点击跳转的链接
-repo_name: zhangkuantian.github.io # 右上角的名字
-
-# [Navigtion]
-nav:
-  - 主页: index.md
-  - 技术:
-    - MKdocs教程:
-        - 利用mkdocs部署静态网页至GitHub pages: blog/Mkdocs/mkdocs1.md
-        - Mkdocs部署静态网页至GitHub pages配置说明(mkdocs.yml): blog/Mkdocs/mkdocs2.md
-        - 解决 mkdocs部署 Github Pages 自定义域名失效的问题: blog/Mkdocs/mkdocs3.md
-        - 网站添加Mkdocs博客: blog/Mkdocs/mkdocsblog.md
-    - Mkdocs美化:
-        - Mkdocs-Wcowin主题: blog/websitebeauty/mkdocs-wcowin1.md
-        - 添加评论系统(giscus为例): blog/websitebeauty/mkcomments.md
-        - 添加顶部公告栏: blog/websitebeauty/header.md
-        - 添加在线聊天: blog/websitebeauty/webtalknow.md
-        - 修改网站字体: blog/websitebeauty/mkdocsfont.md
-        - JS实现鼠标样式: blog/websitebeauty/shubiao.md
-        - 背景特效: blog/websitebeauty/backgroud.md
-        - 为MKdocs添加文章修订时间戳: blog/websitebeauty/time.md     
-
-  - 标签: tag.md
-  - 关于:
-    - 个人简介: about/zhangkuantian.md
-    - 404公益页面: about/404.md
-  
-
-extra:
-  alternate:
-    - name: English
-      link: https://wcowin-work.translate.goog/?_x_tr_sl=zh-CN&_x_tr_tl=en&_x_tr_hl=zh-CN&_x_tr_pto=wapp 
-      lang: en
-  generator: true  #删除页脚显示“使用 MkDocs 材料制造”
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/zhangkuantian
-      name: Github
-    - icon: fontawesome/regular/envelope
-      link: mailto:<zhangkuantian@gmail.com> #联系方式
-      name: Email
-
-plugins:
-  # - glightbox
-  - search
-  - offline
-  - git-revision-date-localized:
-      type: iso_date
-      enable_creation_date: false
-      exclude:
-        - index.md 
-        - tag.md
-  - blog:
-      post_date_format: full #时间
-      draft: true
-      draft_if_future_date: true #自动将具有未来日期的帖子标记为草稿
-      post_readtime: true
-      post_readtime_words_per_minute: 265  #计算帖子的阅读时间时读者每分钟预计阅读的字数
-      post_url_format: "{date}/{slug}"
-      # categories_slugify: !!python/object/apply:pymdownx.slugs.slugify
-      #   kwds:
-      #     case: lower
-      # categories_toc: true
-      # pagination_per_page: 5
-      pagination_url_format: "page/{page}"
-      authors_file: "{blog}/.authors.yml"  #作者信息
-  - tags:
-      tags_file: tag.md  #分类标签
-
-markdown_extensions:
-  - abbr
-  - attr_list
+  #  favicon: attachment/portrait.png
+  language: zh # 中文，解决中文搜索问题
+  features:
+    - navigation.expand 
+    - tabs 
+markdown_extensions: 
+  - attr_list # https://squidfunk.github.io/mkdocs-material/reference/images/
+  - pymdownx.tabbed  # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/
+  - nl2br # newline-to-break 
+  - toc:
+      permalink: '#' # heading anchor 
+      slugify: !!python/name:pymdownx.slugs.uslugify # 解决中文标题解析问题
   - admonition
-  - def_list
+  - codehilite:
+      guess_lang: false
+      linenums: false
   - footnotes
-  - md_in_html
-  - markdown.extensions.abbr # 支持Markdown文件上方自定义标题标签等
+  - meta
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
   - pymdownx.caret
-  - pymdownx.betterem
   - pymdownx.critic
   - pymdownx.details
+  # - pymdownx.emoji:
+      # emoji_generator: !!python/name:pymdownx.emoji.to_png
   - pymdownx.inlinehilite
-  - pymdownx.keys
+  - pymdownx.magiclink
   - pymdownx.mark
-  - pymdownx.snippets
   - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist
   - pymdownx.tilde
-  
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format 
-  - pymdownx.arithmatex:  # latex支持
-      generic: true
-  - toc:
-      permalink: true # 固定标题位置为当前位置
-  - pymdownx.highlight: # 代码块高亮
-      anchor_linenums: true
-      linenums: true # 显示行号
-      # auto_title: true # 显示编程语言名称
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  
-extra_javascript:
-  - javascripts/extra.js
-  - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js
-
-
-extra_css:
-  - stylesheets/extra.css
-  - stylesheets/extra2.css
-  - stylesheets/link.css
-  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css  #字体 
-
+plugins:
+  - search
+  - roamlinks
+  - exclude:
+      glob:
+        - "*.tmp"
+        - "*.pdf"
+        - "*.gz"
+      regex:
+        - '.*\.(tmp|bin|tar)$'
