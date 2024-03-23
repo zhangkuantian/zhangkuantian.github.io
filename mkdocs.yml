@@ -3,6 +3,9 @@ repo_name: kuantian.zhang 的个人博客
 repo_url: https://github.com/zhangkuantian/zhangkuantian.github.io/
 site_description: kuantian.zhang 的工作学习生活笔记
 
+nav:
+    - 'index.md'
+    - 'about.md'
 # 配置主题，在mkdocs.yml文件下
 theme:
     name: material
