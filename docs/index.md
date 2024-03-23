@@ -1,17 +1,36 @@
-# zhangkuantian's Web
-Welcome to zhangkuantian's Web! [[#support roamlinks]]!
+---
+hide:
+    - navigation
+    - footer
+---
 
-* How to create this website and share your foam/obsidian notes? See: [[tutorial]]
-* [foam](https://github.com/foambubble/foam)
+# 主页
 
+!!! abstract "摘要"
 
-## Support roamlinks
+    这里是 秋葉亜里沙 的个人博客。
+    
+    主要记录分享一些学习和生活过程中的点滴。
 
-| origin                  | convert                             |
-| ----------------------- | ----------------------------------- |
-| `[Git Flow](git_flow.md)` | `[Git Flow](../software/git_flow.md)` |
-| `[[Git Flow]]`            | `[Git Flow](../software/git_flow.md)` |
-| `![[image.png]]`           | `![image.png](../image/imag.png)`      |
-| `[[#Heading identifiers]]` | `[Heading identifiers in HTML](#heading-identifiers-in-html)`|
-| `[[Git Flow#Heading]]`     |  `[Git Flow](../software/git_flow.md#heading)` |
+    该博客均为实验性内容，不代表以后最终成品。
 
+[目录 :material-table-of-contents:](toc){ .md-button .md-button--primary }
+[标签 :octicons-tag-16:](tags){ .md-button }
+
+## 关于我
+
+ - 本科非计科，因爱好而学习计算机相关知识，最主要使用的程序语言是 Python。
+ - 目前已经毕业，正在二战考研。
+ - 喜欢音游，目前正在玩的是邦邦和 Arcaea。
+ - 在其他朋友的带领下，现在迷上了 Bot 开发、服务器运维以及逆向工程。
+ - ~~长期接邦邦代打。~~
+
+## 友情链接
+
+ - [HEAVENLYHEAVEN - NUIK BLOG](http://blog.nijikuu.com/)
+ - [MBR's Blog](https://www.mbrjun.cn/)
+ - [InariAimu's Blog](https://blog.inariaimu.com/)
+ - [Akula<>Blog](https://lolicon.akulak.icu/)
+ - [Atmosphere](https://blog.awa.moe/)
+ - [Awblogu](https://blog.awbugl.top)
+ - [BsBlog](https://sorabs.cc/links/)
