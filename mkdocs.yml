@@ -1,27 +1,162 @@
-site_name: 我的工作学习生活笔记
-repo_name: kuantian.zhang 的个人博客
+site_name: kuantian.zhang's Web
 repo_url: https://github.com/zhangkuantian/zhangkuantian.github.io/
-site_description: kuantian.zhang 的工作学习生活笔记
+site_author: 张宽天(kuantian.zhang)
+repo_name: zhangkuantian.github.io # 右上角的名字
 
-nav:
-    - 'index.md'
-    - 'about.md'
 # 配置主题，在mkdocs.yml文件下
 theme:
     name: material
     custom_dir: overrides
     language: zh
     palette: # 文档颜色, https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
-        scheme: default # 配色方案
-        primary: default # 主色
-        accent: red # 强调色
+        - media: "(prefers-color-scheme: light)"
+          scheme: default # 日间模式
+          primary: blue grey # 上方的
+          accent: indigo # 链接等可交互元件的高亮色
+          # teal
+          toggle:
+            icon: material/toggle-switch # 图标
+            name: 切换至夜间模式 # 鼠标悬浮提示
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate # 夜间模式
+          primary: black
+          accent: indigo
+          # teal
+          toggle:
+            icon: material/toggle-switch-off-outline
+            name: 切换至日间模式
     features:
+        - announce.dismiss
         - content.code.copy # 代码支持拷贝
         - content.tabs.link # 内容tabs支持  https://squidfunk.github.io/mkdocs-material/reference/content-tabs/
+        - navigation.tracking
         - navigation.tabs # 顶部导航
         - navigation.tabs.sticky # 顶部导航粘连
+        - navigation.sections
+        - navigation.footer
         - navigation.indexes # 导航index页面支持
-        # - navigation.sections # 全部展开(非折叠状态)
-        # - navigation.expand # 子目录展开
         - navigation.top # 返回顶部按钮
+        - search.suggest
+        - search.highlight
+        - search.share
+        - navigation.expand
+        - navigation.indexes
+        - content.tabs.link
+        - content.tooltips
+        - content.code.copy
+        - content.action.edit
+        - content.action.view
+        - content.code.annotate
         - toc.follow # 页面目录支持
+
+# [Navigtion]
+nav:
+    - 主页: index.md
+    - 技术:
+        - Mac/windows软件网站汇总: blog/macsoft.md
+        - 语雀: blog/yuque.md
+        - 好用/好玩网站分享: blog/Webplay.md
+    - 开发:
+        - 我的设备: develop/mydevice.md
+    - 闲话:
+        - 推荐的Books: relax/tuijianyuedu.md
+    - 关于:
+        - 个人简介: about.md
+extra:
+  # tags:
+  #   HTML5: html
+  #   JavaScript: js
+  #   CSS: css
+  alternate:
+    - name: English
+      link: https://wcowin-work.translate.goog/?_x_tr_sl=zh-CN&_x_tr_tl=en&_x_tr_hl=zh-CN&_x_tr_pto=wapp
+      lang: en
+  generator: true
+
+plugins:
+  # - glightbox
+  - search
+  - offline
+  - git-revision-date-localized:
+      type: iso_date
+      enable_creation_date: false
+      exclude:
+        - index.md
+        - tag.md
+        - waline.md
+        - blog/posts/update.md
+        - blog/posts/wkw.md
+        - about/link.md
+  # - git-authors:
+  #     exclude:
+  #       - index.md
+  - blog:
+      post_date_format: full #时间
+      draft: true
+      draft_if_future_date: true #自动将具有未来日期的帖子标记为草稿
+      post_readtime: true
+      post_readtime_words_per_minute: 265  #计算帖子的阅读时间时读者每分钟预计阅读的字数
+      post_url_format: "{date}/{slug}"
+      # categories_slugify: !!python/object/apply:pymdownx.slugs.slugify
+      #   kwds:
+      #     case: lower
+      # categories_toc: true
+      # pagination_per_page: 5
+      pagination_url_format: "page/{page}"
+      authors_file: "{blog}/.authors.yml"  #作者信息
+  - tags:
+      tags_file: tag.md  #分类标签
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - def_list
+  - footnotes
+  - md_in_html
+  - markdown.extensions.abbr # 支持Markdown文件上方自定义标题标签等
+  - pymdownx.caret
+  - pymdownx.betterem
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.smartsymbols
+  - pymdownx.tilde
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:  # latex支持
+      generic: true
+  - toc:
+      permalink: true # 固定标题位置为当前位置
+  - pymdownx.highlight: # 代码块高亮
+      anchor_linenums: true
+      linenums: true # 显示行号
+      # auto_title: true # 显示编程语言名称
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_javascript:
+  - javascripts/extra.js
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js
+
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/extra2.css
+  - stylesheets/link.css
+  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css  #字体
