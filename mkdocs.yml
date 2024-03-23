@@ -1,47 +1,100 @@
-site_name: zhangkuantian's Web
+site_name: Arisa | Blog
+site_description: Arisa 的个人博客
+site_author: Akiba Arisa
+site_url: https://blog.arisa.moe/
+
+repo_url: https://github.com/zhanbao2000/blog
+repo_name: zhanbao2000/blog
+
 theme:
   name: material
-  #  favicon: attachment/portrait.png
-  language: zh # 中文，解决中文搜索问题
+  custom_dir: overrides
+  favicon: assets/favicon.webp
+  icon:
+    logo: octicons/code-review-16
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: 进入夜间模式
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: 进入日间模式
+  language: 'zh'
   features:
-    - navigation.expand 
-    - tabs 
-markdown_extensions: 
-  - attr_list # https://squidfunk.github.io/mkdocs-material/reference/images/
-  - pymdownx.tabbed  # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/
-  - nl2br # newline-to-break 
-  - toc:
-      permalink: '#' # heading anchor 
-      slugify: !!python/name:pymdownx.slugs.uslugify # 解决中文标题解析问题
+    - navigation.footer
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - content.code.copy
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/zhanbao2000
+      name: AkibaArisa on GitHub
+    - icon: fontawesome/brands/steam
+      link: https://steamcommunity.com/id/akibaarisa
+      name: AkibaArisa on Steam
+
+extra_css:
+  - stylesheets/custom.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/waifu/autoload.js  # 十分耗时，放在最后加载
+
+plugins:
+  - search
+  - blogging:
+      locale: zh_CN
+      dirs:
+        - blog
+      features:
+        tags: {}
+      theme:
+        name: card
+        time_format: '%Y-%m-%d %H:%M:%S'
+        meta_time_format: '%Y-%m-%d %H:%M:%S'
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: iso_datetime
+  - glightbox:
+      draggable: false
+
+markdown_extensions:
   - admonition
-  - codehilite:
-      guess_lang: false
-      linenums: false
-  - footnotes
-  - meta
+  - attr_list
   - def_list
-  - pymdownx.arithmatex
-  - pymdownx.betterem:
-      smart_enable: all
+  - footnotes
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
-  # - pymdownx.emoji:
-      # emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
   - pymdownx.inlinehilite
+  - pymdownx.keys
   - pymdownx.magiclink
   - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.tasklist
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.tilde
-plugins:
-  - search
-  - roamlinks
-  - exclude:
-      glob:
-        - "*.tmp"
-        - "*.pdf"
-        - "*.gz"
-      regex:
-        - '.*\.(tmp|bin|tar)$'
+  - toc:
+      permalink: true
+
+copyright: 'Copyright &copy; 2077 Akiba Arisa <a href="https://icp.gov.moe/?keyword=20232033" target="_blank">萌ICP备20232033号</a>'
