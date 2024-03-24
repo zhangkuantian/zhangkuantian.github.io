@@ -1,9 +1,9 @@
-site_name: Arisa | Blog
-site_description: Arisa 的个人博客
-site_author: Akiba Arisa
+site_name: kuantian.zhang's Web
+site_description: kuantian.zhang 的个人博客
+site_author: kuantian.zhang
 site_url: https://blog.arisa.moe/
 
-repo_url: https://github.com/zhanbao2000/blog
+repo_url: https://github.com/zhangkuantian.github.io
 repo_name: zhanbao2000/blog
 
 theme:
