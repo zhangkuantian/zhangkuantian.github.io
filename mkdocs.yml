@@ -3,7 +3,7 @@ site_description: kuantian.zhang 的个人博客
 site_author: kuantian.zhang
 site_url: https://zhangkuantian.github.io/
 
-repo_url: https://github.com/zhangkuantian.github.io
+repo_url: https://github.com/zhangkuantian/zhangkuantian.github.io
 repo_name: zhangkuantian/blog
 
 theme:
