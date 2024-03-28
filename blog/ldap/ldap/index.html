@@ -12,28 +12,26 @@
         <meta name="author" content="kuantian.zhang">
       
       
-        <link rel="canonical" href="https://zhangkuantian.github.io/tags/">
+        <link rel="canonical" href="https://zhangkuantian.github.io/blog/ldap/ldap/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../../../toc/">
       
       
-        <link rel="next" href="../toc/">
       
-      
-      <link rel="icon" href="../assets/favicon.webp">
+      <link rel="icon" href="../../../assets/favicon.webp">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.8">
     
     
       
-        <title>标签 - kuantian.zhang's Web</title>
+        <title>datahub-project 通过LDAP登陆 - kuantian.zhang's Web</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,16 +50,16 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -70,7 +68,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -88,6 +86,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#datahub-project-ldap" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -98,7 +101,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="kuantian.zhang&#39;s Web" class="md-header__button md-logo" aria-label="kuantian.zhang's Web" data-md-component="logo">
+    <a href="../../.." title="kuantian.zhang&#39;s Web" class="md-header__button md-logo" aria-label="kuantian.zhang's Web" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 1h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 13H8.061l-2.574 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25v-8.5C0 1.784.784 1 1.75 1ZM1.5 2.75v8.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25Zm5.28 1.72a.75.75 0 0 1 0 1.06L5.31 7l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.75.75 0 0 1 1.06 0Zm2.44 0a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L10.69 7 9.22 5.53a.75.75 0 0 1 0-1.06Z"/></svg>
@@ -118,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              标签
+              datahub-project 通过LDAP登陆
             
           </span>
         </div>
@@ -225,7 +228,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -240,11 +243,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../../tags/" class="md-tabs__link">
         
   
     
@@ -261,7 +262,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../toc/" class="md-tabs__link">
+      <a href="../../../toc/" class="md-tabs__link">
         
   
     
@@ -276,17 +277,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../blog/ldap/ldap/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   Blog
@@ -311,9 +316,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -324,7 +327,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="kuantian.zhang&#39;s Web" class="md-nav__button md-logo" aria-label="kuantian.zhang's Web" data-md-component="logo">
+    <a href="../../.." title="kuantian.zhang&#39;s Web" class="md-nav__button md-logo" aria-label="kuantian.zhang's Web" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 1h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 13H8.061l-2.574 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25v-8.5C0 1.784.784 1 1.75 1ZM1.5 2.75v8.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-8.5a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25Zm5.28 1.72a.75.75 0 0 1 0 1.06L5.31 7l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.75.75 0 0 1 1.06 0Zm2.44 0a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L10.69 7 9.22 5.53a.75.75 0 0 1 0-1.06Z"/></svg>
@@ -354,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -371,17 +374,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -390,7 +386,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -402,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../toc/" class="md-nav__link">
+      <a href="../../../toc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -419,8 +414,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -429,12 +426,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -448,7 +445,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -459,19 +456,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
         
           
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
@@ -485,7 +484,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_1">
             <span class="md-nav__icon md-icon"></span>
             Ldap
@@ -496,10 +495,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../blog/ldap/ldap/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    datahub-project 通过LDAP登陆
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -508,6 +527,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      调试步骤如下
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jaas" class="md-nav__link">
+    <span class="md-ellipsis">
+      jaas 配置如下
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -536,8 +593,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -547,6 +602,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      调试步骤如下
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jaas" class="md-nav__link">
+    <span class="md-ellipsis">
+      jaas 配置如下
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -565,76 +648,61 @@ doesn't, the page title (or respectively site name) is used
 as the main headline.
 -->
 
-    <h1>标签</h1>
-
 
 <!-- Markdown content -->
 
     
 
+        <aside class="mdx-author">
+            <p>
+                <img src="https://avatars.githubusercontent.com/kuantian.zhang" alt="@kuantian.zhang">
+            </p>
+            <p>
+                <span>
+                    <b>kuantian.zhang</b> · <a href="https://github.com/kuantian.zhang">@kuantian.zhang</a>
+                </span>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                    </svg> 4 min read
+                </span>
+            </p>
+        </aside>
+
     
 
-    <p>
-
-<div class="blogging-tags-grid">
+    
+        <div class="tags">
         
-        <a href="#datahub" class="blogging-tag"><code>#datahub</code></a>
+            <a href="/tags/#datahub" class="tag"><code>#datahub</code></a>
         
-        <a href="#datahub-project" class="blogging-tag"><code>#datahub-project</code></a>
+            <a href="/tags/#datahub-project" class="tag"><code>#datahub-project</code></a>
         
-        <a href="#ldap" class="blogging-tag"><code>#ldap</code></a>
+            <a href="/tags/#ldap" class="tag"><code>#ldap</code></a>
         
-    </div>
+        </div>
     
 
-
-
-
-<h3 id="datahub">#datahub</h3>
-    
-        
-            
-            
-        
-        <li>
-            <a href="https://zhangkuantian.github.io/blog/ldap/ldap/">datahub-project 通过LDAP登陆</a>
-            &nbsp;&nbsp;
-            <span style="color: var(--md-default-fg-color--light)">
-                2023/3/31 03:29
-            </span>
-        </li>
-    
-
-<h3 id="datahub-project">#datahub-project</h3>
-    
-        
-            
-            
-        
-        <li>
-            <a href="https://zhangkuantian.github.io/blog/ldap/ldap/">datahub-project 通过LDAP登陆</a>
-            &nbsp;&nbsp;
-            <span style="color: var(--md-default-fg-color--light)">
-                2023/3/31 03:29
-            </span>
-        </li>
-    
-
-<h3 id="ldap">#ldap</h3>
-    
-        
-            
-            
-        
-        <li>
-            <a href="https://zhangkuantian.github.io/blog/ldap/ldap/">datahub-project 通过LDAP登陆</a>
-            &nbsp;&nbsp;
-            <span style="color: var(--md-default-fg-color--light)">
-                2023/3/31 03:29
-            </span>
-        </li>
-    
-</p>
+    <h1 id="datahub-project-ldap">datahub-project 通过LDAP登陆<a class="headerlink" href="#datahub-project-ldap" title="Permanent link">&para;</a></h1>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;最近在调研datahub-project，我们希望使用统一的LDAP登陆，之前没弄过LDAP，调试了很久，才终于搞定。</p>
+<h3 id="_1">调试步骤如下<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>生成jaas.conf文件</li>
+<li>将jaas.conf 挂载到datahub-frontend的/datahub-frontend/conf目录下或者重新打DockerImage，将jaas.conf拷贝到datahub-frontend的/datahub-frontend/conf目录下， 我们因为做了一些修改，所以就直接在重新打image时，拷贝过去了</li>
+</ul>
+<h3 id="jaas">jaas 配置如下<a class="headerlink" href="#jaas" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>WHZ-Authentication {
+com.sun.security.auth.module.LdapLoginModule sufficient
+java.naming.security.authentication=&quot;simple&quot;
+userProvider=&quot;ldap://xxx.xxx.xxx.xxx:389/{baseDn}&quot;
+userFilter=&quot;(&amp;(objectClass=person)(sAMAccountName={USERNAME}))&quot;
+java.naming.security.principal=&quot;{service_account}&quot;
+java.naming.security.credentials=&quot;{service_password}&quot;
+useSSL=false
+debug=true;
+};
+</code></pre></div>
 
     <!-- Last update of source file -->
     
@@ -661,7 +729,7 @@ as the main headline.
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2024-03-23 09:11:27</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2024-03-28 08:14:48</span>
   </span>
 
     
@@ -671,7 +739,7 @@ as the main headline.
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2024-03-23 09:11:27</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2023-03-31 03:29:44</span>
   </span>
 
     
@@ -681,6 +749,54 @@ as the main headline.
 
         
     
+
+    
+
+        <!-- Giscus -->
+        <h2 id="__comments">评论</h2>
+        <script src="https://giscus.app/client.js"
+                data-repo="zhanbao2000/blog"
+                data-repo-id="R_kgDOHIZK7A"
+                data-category="Announcements"
+                data-category-id="DIC_kwDOHIZK7M4COdSe"
+                data-mapping="pathname"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="top"
+                data-theme="light"
+                data-lang="zh-CN"
+                data-loading="lazy"
+                crossorigin="anonymous"
+                async>
+        </script>
+
+        <!-- Reload on palette change -->
+        <script>
+            const palette = __md_get("__palette");
+            if (palette && typeof palette.color === "object")
+                if (palette.color.scheme === "slate") {
+                    const giscus = document.querySelector("script[src*=giscus]");
+                    giscus.setAttribute("data-theme", "dark")
+                }
+
+            /* Register event handlers after documented loaded */
+            document.addEventListener("DOMContentLoaded", function() {
+                const ref = document.querySelector("[data-md-component=palette]");
+                ref.addEventListener("change", function() {
+                    const palette = __md_get("__palette");
+                    if (palette && typeof palette.color === "object") {
+                        const theme = palette.color.scheme === "slate" ? "dark" : "light";
+
+                        /* Instruct Giscus to change theme */
+                        const frame = document.querySelector(".giscus-frame");
+                        frame.contentWindow.postMessage(
+                            { giscus: { setConfig: { theme } } },
+                            "https://giscus.app"
+                        )
+                    }
+                })
+            })
+        </script>
 
     
 
@@ -704,12 +820,10 @@ as the main headline.
   
     
       
-        
-      
-      <nav class="md-footer__inner md-grid" aria-label="页脚" hidden>
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="上一页: 主页">
+          <a href="../../../toc/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 目录">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -719,27 +833,11 @@ as the main headline.
                 上一页
               </span>
               <div class="md-ellipsis">
-                主页
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../toc/" class="md-footer__link md-footer__link--next" aria-label="下一页: 目录">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
                 目录
               </div>
             </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
           </a>
+        
         
       </nav>
     
@@ -786,18 +884,18 @@ as the main headline.
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "navigation.tabs", "navigation.top", "navigation.tracking", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.top", "navigation.tracking", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="../javascripts/waifu/autoload.js"></script>
+        <script src="../../../javascripts/waifu/autoload.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": false, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
