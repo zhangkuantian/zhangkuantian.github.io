@@ -1,10 +1,10 @@
 site_name: kuantian.zhang's Web
 site_description: kuantian.zhang 的个人博客
 site_author: kuantian.zhang
-site_url: https://blog.arisa.moe/
+site_url: https://zhangkuantian.github.io/
 
 repo_url: https://github.com/zhangkuantian.github.io
-repo_name: zhanbao2000/blog
+repo_name: zhangkuantian/blog
 
 theme:
   name: material
@@ -32,7 +32,7 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/zhanbao2000
+      link: https://github.com/zhangkuantian
       name: AkibaArisa on GitHub
     - icon: fontawesome/brands/steam
       link: https://steamcommunity.com/id/akibaarisa
