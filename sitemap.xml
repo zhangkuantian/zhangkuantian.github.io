@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://blog.arisa.moe/</loc>
+         <loc>https://zhangkuantian.github.io/</loc>
          <lastmod>2024-03-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://blog.arisa.moe/tags/</loc>
+         <loc>https://zhangkuantian.github.io/tags/</loc>
          <lastmod>2024-03-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://blog.arisa.moe/toc/</loc>
+         <loc>https://zhangkuantian.github.io/toc/</loc>
          <lastmod>2024-03-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
