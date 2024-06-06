@@ -1,13 +1,3 @@
----
-author: kuantian.zhang
-author_gh_user: kuantian.zhang
-read_time: 4 min
-tags:
-    - datahub
-    - datahub-project
-    - ldap
-title: datahub-project 通过LDAP登陆
----
 # datahub-project 通过LDAP登陆
 &nbsp;&nbsp;&nbsp;&nbsp;最近在调研datahub-project，我们希望使用统一的LDAP登陆，之前没弄过LDAP，调试了很久，才终于搞定。
 ### 调试步骤如下
