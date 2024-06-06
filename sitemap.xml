@@ -2,37 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://zhangkuantian.github.io/</loc>
-         <lastmod>2024-04-22</lastmod>
+         <lastmod>2024-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhangkuantian.github.io/tags/</loc>
-         <lastmod>2024-04-22</lastmod>
+         <lastmod>2024-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhangkuantian.github.io/toc/</loc>
-         <lastmod>2024-04-22</lastmod>
+         <lastmod>2024-06-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zhangkuantian.github.io/blog/catalog/Unity%20Catalog%20%E8%B0%83%E7%A0%94/</loc>
+         <lastmod>2024-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhangkuantian.github.io/blog/cube-js/overview/</loc>
-         <lastmod>2024-04-22</lastmod>
+         <lastmod>2024-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhangkuantian.github.io/blog/dqc/dqc_design/</loc>
-         <lastmod>2024-04-22</lastmod>
+         <lastmod>2024-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhangkuantian.github.io/blog/dqc/%E6%95%B0%E6%8D%AE%E7%9B%91%E6%8E%A7%E6%9E%B6%E6%9E%84%E6%96%87%E6%A1%A3/</loc>
-         <lastmod>2024-04-22</lastmod>
+         <lastmod>2024-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zhangkuantian.github.io/blog/ldap/ldap/</loc>
-         <lastmod>2024-04-22</lastmod>
+         <lastmod>2024-06-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

@@ -12,13 +12,13 @@
         <meta name="author" content="kuantian.zhang">
       
       
-        <link rel="canonical" href="https://zhangkuantian.github.io/blog/dqc/%E6%95%B0%E6%8D%AE%E7%9B%91%E6%8E%A7%E6%9E%B6%E6%9E%84%E6%96%87%E6%A1%A3/">
+        <link rel="canonical" href="https://zhangkuantian.github.io/blog/catalog/Unity%20Catalog%20%E8%B0%83%E7%A0%94/">
       
       
-        <link rel="prev" href="../dqc_design/">
+        <link rel="prev" href="../../../toc/">
       
       
-        <link rel="next" href="../../ldap/ldap/">
+        <link rel="next" href="../../cube-js/overview/">
       
       
       <link rel="icon" href="../../../assets/favicon.webp">
@@ -26,7 +26,7 @@
     
     
       
-        <title>数据监控架构文档 - kuantian.zhang's Web</title>
+        <title>Unity Catalog 调研 - kuantian.zhang's Web</title>
       
     
     
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              数据监控架构文档
+              Unity Catalog 调研
             
           </span>
         </div>
@@ -293,7 +293,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../catalog/Unity%20Catalog%20%E8%B0%83%E7%A0%94/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
   Blog
@@ -458,19 +458,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
         
           
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
@@ -484,7 +486,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_1">
             <span class="md-nav__icon md-icon"></span>
             Catalog
@@ -495,10 +497,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../catalog/Unity%20Catalog%20%E8%B0%83%E7%A0%94/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Unity Catalog 调研
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -507,6 +527,138 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unity-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是 Unity Catalog?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      功能
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unity-catalog_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unity Catalog 对象模型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unity Catalog 对象模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metastore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metastore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Catalog
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schemas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volumes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#views" class="md-nav__link">
+    <span class="md-ellipsis">
+      Views
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Models
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unity-catalog_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unity Catalog 与我们现有方案的关联
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -590,21 +742,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -618,7 +768,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             Dqc
@@ -632,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dqc_design/" class="md-nav__link">
+      <a href="../../dqc/dqc_design/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -650,28 +800,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    数据监控架构文档
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../dqc/%E6%95%B0%E6%8D%AE%E7%9B%91%E6%8E%A7%E6%9E%B6%E6%9E%84%E6%96%87%E6%A1%A3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -680,78 +812,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      背景
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      设计方案
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#master" class="md-nav__link">
-    <span class="md-ellipsis">
-      Master 设计
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      Metadata 设计
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#worker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Worker 设计
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#monitor" class="md-nav__link">
-    <span class="md-ellipsis">
-      Monitor 设计
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -872,45 +932,105 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#unity-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是 Unity Catalog?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      设计方案
+      功能
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#master" class="md-nav__link">
+  <a href="#unity-catalog_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Master 设计
+      Unity Catalog 对象模型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unity Catalog 对象模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metastore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metastore
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#metadata" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#catalog" class="md-nav__link">
     <span class="md-ellipsis">
-      Metadata 设计
+      Catalog
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#worker" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#schemas" class="md-nav__link">
     <span class="md-ellipsis">
-      Worker 设计
+      Schemas
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volumes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#views" class="md-nav__link">
+    <span class="md-ellipsis">
+      Views
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Models
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#monitor" class="md-nav__link">
+  <a href="#unity-catalog_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Monitor 设计
+      Unity Catalog 与我们现有方案的关联
     </span>
   </a>
   
@@ -935,7 +1055,7 @@ doesn't, the page title (or respectively site name) is used
 as the main headline.
 -->
 
-    <h1>数据监控架构文档</h1>
+    <h1>Unity Catalog 调研</h1>
 
 
 <!-- Markdown content -->
@@ -945,324 +1065,43 @@ as the main headline.
     
 
     <h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>我们在2023年引入了 dbt + soda，解决了大部分的数据质量校验的问题，但是只解决了数据开发过程中的数据质量问题，加上上手门槛较高，普通用户没法直接上手，需要构建一套前后端的平台，帮助用户快速上手，在解决数据质量的同时能够即时的监控业务数据的波动情况，及时反馈。确保数据满足四个基本原则：完整性、准确性、一致性和时效性。同时，还需要满足各个用户实际场景的定制化需求。</p>
-<h2 id="_2">设计方案<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>在现有的 soda DQC 的基础上，增加支持用户界面配置校验规则的功能，支持 UI 到 Soda DSL 解析的功能， 支持分布式执行规则功能，支持用户自定义告警规则功能。</p>
-<p>大体的架构流程如下图:</p>
-<p><a class="glightbox" href="../imgs/img.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="../imgs/img.png" /></a>
-整个系统分 Master、Worker、Metadata、Monitor 5个模块，每个模块的职责如下:</p>
+<p>数据湖里的数据和表越来越多，包括训练里的模型也越来越多，如何将模型和表管理起来，变得更加麻烦，需要一个统一的平台进行管理。目前业界商用SaaS平台里 Databricks 的 Unity Catalog 做得比较好，开源的 DataHub 也是做统一Catalog 的</p>
+<h2 id="unity-catalog">什么是 Unity Catalog?<a class="headerlink" href="#unity-catalog" title="Permanent link">&para;</a></h2>
+<p>Unity Catalog 是一个统一的大数据 + AI 资产治理解决方案，提供跨 workspace 的权限管控、审计、数据血缘及数据发现功能。</p>
+<p>大致结构如下图:</p>
+<p><a class="glightbox" href="../images/img.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="结构图" src="../images/img.png" /></a></p>
+<h2 id="_2">功能<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Master：负责跟用户交互、管理元数据、定期扫描数据源生成数据集元数据、定期根据配置生成校验规则任务</li>
-<li>Metadata：主要是负责保存元数据，确保分布式任务操作的原子性</li>
-<li>Worker：负责具体的规则校验任务执行，包括从 Metadata 中抢占任务，解析任务，执行任务，执行完毕后更新任务的元数据(运行状态、校验状态、校验结果值等信息)</li>
-<li>Monitor：不断的去 poke Metadata 获取运行状态处于校验失败且尚未发出告警信息的任务，根据告警配置信息构建告警消息体发送给告警平台或者直接发出告警信息到用户的邮箱或者企业微信中</li>
+<li><strong>Define once, secure everywhere</strong>：统一的 ACL 管控，只需要在一处定义 ACL Policy 就可以在所有的 workspace 中使用了</li>
+<li><strong>Standards-compliant security model</strong>：标准的 ANSI SQL 安全模型，管理员可以使用标准的 SQL 语法为 Catalog、Schema、Table 和 View 执行权限操作</li>
+<li><strong>Built-in auditing and lineage</strong>：自动采集user级别的审计日志，自动采集数据血缘</li>
+<li><strong>Data discovery</strong>：允许用户给数据集打标签和添加描述信息，提供搜索界面帮助数据消费者查找数据</li>
+<li><strong>System tables (Public Preview)</strong>：允许用户访问和查询账户的操作数据，包括审计日志、账单数据及血缘数据</li>
 </ul>
-<h2 id="master">Master 设计<a class="headerlink" href="#master" title="Permanent link">&para;</a></h2>
-<p>Master 主要提供以下功能: 用户交互 API、元数据管理 API、数据源扫描、数据集生成、校验规则任务生成API。
-用户通过界面配置数据源，数据源元数据信息写入到 metadata 中，master 的 datasource scan 进程会根据元数据，扫描数据源获取需要的数据集。
-<strong>数据源元数据</strong></p>
-<table>
-<thead>
-<tr>
-<th>字段名称</th>
-<th>字段描述</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>数据源名称</td>
-<td>用于标记数据源，需要全局唯一，可以采用 {type}<em db_name="db_name">{catalog}</em></td>
-<td></td>
-</tr>
-<tr>
-<td>数据源类型</td>
-<td>可支持: datalake、rds、mpp等类型</td>
-<td></td>
-</tr>
-<tr>
-<td>数据源 host</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>数据源 port</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>数据源 user</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>数据源 password</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>db_name</td>
-<td>默认为空，如果 db_name 不填写、那么采集所有的db</td>
-<td></td>
-</tr>
-<tr>
-<td>include_db_list</td>
-<td>默认为空，如果 db_name不填写，那么采集include_db_list里的db</td>
-<td></td>
-</tr>
-<tr>
-<td>exclude_db_list</td>
-<td>默认为空，如果 db_name不填写，那么采集所有不在exclude_db_list里的 db</td>
-<td></td>
-</tr>
-<tr>
-<td>激活状态</td>
-<td>如果为激活状态，那么可以启动采集任务，否则无法执行采集操作</td>
-<td></td>
-</tr>
-<tr>
-<td>调度周期</td>
-<td>可以是 @daily、@hourly 也可以是 普通的 crontab 表达式</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>数据集元数据</strong></p>
-<table>
-<thead>
-<tr>
-<th>字段名称</th>
-<th>字段描述</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>data_source_name</td>
-<td>数据源名称</td>
-<td></td>
-</tr>
-<tr>
-<td>db_name</td>
-<td>DB 名称</td>
-<td></td>
-</tr>
-<tr>
-<td>table_name</td>
-<td>Table 名称</td>
-<td></td>
-</tr>
-<tr>
-<td>dataset_name</td>
-<td>数据集名称</td>
-<td></td>
-</tr>
-<tr>
-<td>schedule_interval</td>
-<td>调度周期</td>
-<td></td>
-</tr>
-<tr>
-<td>is_active</td>
-<td>激活状态</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>校验规则元数据</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>字段名称</strong></th>
-<th><strong>字段描述</strong></th>
-<th><strong>备注</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>dataset_name</td>
-<td>数据集名称</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>check_name</td>
-<td>规则名称</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>check_yml</td>
-<td>规则配置 yml</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>weight</td>
-<td>权重</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>owner</td>
-<td>check 的owner</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>alert_list</td>
-<td>高级列表</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>校验规则任务元数据</strong></p>
-<table>
-<thead>
-<tr>
-<th>字段名称</th>
-<th>字段描述</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>dataset_name</td>
-<td>数据集名称</td>
-<td></td>
-</tr>
-<tr>
-<td>check_name</td>
-<td>规则名称</td>
-<td></td>
-</tr>
-<tr>
-<td>execution_date</td>
-<td>运行周期</td>
-<td></td>
-</tr>
-<tr>
-<td>weight</td>
-<td>权重</td>
-<td></td>
-</tr>
-<tr>
-<td>owner</td>
-<td>规则owner</td>
-<td></td>
-</tr>
-<tr>
-<td>state</td>
-<td>规则运行状态</td>
-<td></td>
-</tr>
-<tr>
-<td>retry_number</td>
-<td>重试次数</td>
-<td></td>
-</tr>
-<tr>
-<td>start_date</td>
-<td>开始时间</td>
-<td></td>
-</tr>
-<tr>
-<td>end_date</td>
-<td>结束时间</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>校验规则任务结果元数据</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>字段名称</strong></th>
-<th><strong>字段描述</strong></th>
-<th><strong>备注</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>dataset_name</td>
-<td>数据集名称</td>
-<td></td>
-</tr>
-<tr>
-<td>check_name</td>
-<td>校验名称</td>
-<td></td>
-</tr>
-<tr>
-<td>execution_date</td>
-<td>执行周期</td>
-<td></td>
-</tr>
-<tr>
-<td>owner</td>
-<td>owner</td>
-<td></td>
-</tr>
-<tr>
-<td>check_attribute</td>
-<td>告警规则阈值</td>
-<td></td>
-</tr>
-<tr>
-<td>alert_list</td>
-<td>告警列表</td>
-<td></td>
-</tr>
-<tr>
-<td>result_value</td>
-<td>校验结果值</td>
-<td></td>
-</tr>
-<tr>
-<td>state</td>
-<td>校验状态：pass、fail、error</td>
-<td></td>
-</tr>
-<tr>
-<td>alert_tag</td>
-<td>告警状态</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="metadata">Metadata 设计<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h2>
-<p>目前使用 RDS 当作 metadata 模块，目前压测是能支撑 2000 左右的并行操作, 我们目前的集群最多就启 500 个 pod，足以支撑我们的业务。</p>
-<h2 id="worker">Worker 设计<a class="headerlink" href="#worker" title="Permanent link">&para;</a></h2>
-<p>worker 主要是去获取可执行的校验任务，执行校验任务。</p>
-<p>大致流程如下图:</p>
-<p><a class="glightbox" href="../imgs/img_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="../imgs/img_1.png" /></a></p>
-<h2 id="monitor">Monitor 设计<a class="headerlink" href="#monitor" title="Permanent link">&para;</a></h2>
-<p>周期性的去轮询校验规则任务结果元数据，获取需要发出告警的任务，构建告警消息体。</p>
+<h2 id="unity-catalog_1">Unity Catalog 对象模型<a class="headerlink" href="#unity-catalog_1" title="Permanent link">&para;</a></h2>
+<p>Unity Catalog 对象模型自顶向下分别是: <strong>Metastore ——&gt; Catalog ——&gt; Schema ——&gt; Table、View、Volume、Function、Model</strong></p>
+<p>如下图：</p>
+<p><a class="glightbox" href="../images/img_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="对象模型图" src="../images/img_1.png" /></a></p>
+<p>其中 Volume 主要是用于管理非结构化数据、Model 用于管理ML模型, 需要在 <a href="https://www.mlflow.org/docs/latest/model-registry.html">MLflow Model Registry</a> 中注册才能采集到。</p>
+<h3 id="metastore">Metastore<a class="headerlink" href="#metastore" title="Permanent link">&para;</a></h3>
+<p>Unity Catalog 的顶层Container， 用于存储关于数据资产 (表、视图、卷、模型等) 的元数据，以及管理对这些数据资产访问权限的权限信息。</p>
+<h3 id="catalog">Catalog<a class="headerlink" href="#catalog" title="Permanent link">&para;</a></h3>
+<p>Unity Catalog 三层 namespace 结构中的第一层，用于组织用户数据资产，用户可以查看所有被授予 <code>UER CATALOG</code> 权限的 catalog。</p>
+<h3 id="schemas">Schemas<a class="headerlink" href="#schemas" title="Permanent link">&para;</a></h3>
+<p>Schema 是 Unity Catalog 三层 namespace 中的第二层，用于组织表和视图。用户可以查看在 schema 的父catalog 中拥有 <code>USE CATALOG</code> 权限，在schema中用于 <code>USE SCHEMA</code> 权限的所有schema 列表。如果用户拥有表和视图的<code>SELECT</code>权限，就可以访问或者 list 该 schema 下的表和视图。</p>
+<h3 id="volumes">Volumes<a class="headerlink" href="#volumes" title="Permanent link">&para;</a></h3>
+<p>volumes 处于 Unity Catalog 三层 namespace 中的第三层，与表、视图及其他由 schema 组织的 object 属于同级关系。volumes 包含以任意格式存储的数据目录和文件，volume 提供对数据的非表格访问，volume 中的数据文件不能被注册成为表格。
+要创建 volume ，用户必须具有 <code>CREATE VOLUME</code> 和 <code>USE SCHEMA</code> 权限，且必须具有对应 catalog 的 <code>USE CATALOG</code> 权限。
+要读取 volume 中的文件和目录，用户必须具有 <code>READ VOLUME</code> 权限，且具有对应 schema 和 catalog 的 <code>USE SCHEMA</code> 和 <code>USE CATALOG</code> 权限。
+要添加 、删除、修改 volume 的文件或者目录，用户必须具有 <code>WRITE VOLUME</code> 权限，且必须具有对应schema 和 catalog 的 <code>USE SCHEMA</code> 和 <code>USE CATALOG</code> 权限。</p>
+<h3 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">&para;</a></h3>
+<p>table 处于 Unity Catalog 三层 namespace 中的第三层，用于管理表格数据。要创建表，用户必须具有 CREATE 权限及对应 schema 和 catalog 的 <code>USE SCHEMA</code> 和 <code>USE CATALOG</code> 权限。要查询表，用户必须具有 <code>SELECT</code> 权限及对应 schema 和 catalog 的 <code>USE SCHEMA</code> 和 <code>USE CATALOG</code> 权限。要修改或者删除表，用户必须具有相应的 <code>ALTER</code>、<code>DROP</code> 权限。table 跟普通数据湖一样，分 <code>managed table</code> 和 <code>external table</code>。</p>
+<h3 id="views">Views<a class="headerlink" href="#views" title="Permanent link">&para;</a></h3>
+<p>view 是基于 metastore 中的表或者其他 view 创建的只读对象，处于 Unity Catalog 中的第三层。用户可以基于不同的 schema 和 catalog 中的表或者视图来创建 view，用户也可以通过创建 dynamic view 来实现行级或者列级权限管控。</p>
+<h3 id="models">Models<a class="headerlink" href="#models" title="Permanent link">&para;</a></h3>
+<p>model 处于 Unity Catalog 三层 namespace 中的第三层，unity catalog 中的 model 是指在 <a href="https://www.mlflow.org/docs/latest/model-registry.html">MLflow Model Registry</a> 中注册的机器学习模型，要在 Unity Catalog 中创建model，用户需要在对应的 schema 和 catalog 中拥有 <code>CREATE MODEL</code> 权限，同时还需要拥有对应 schema 和 catalog 的 <code>USE SCHEMA</code> 和 <code>USE CATALOG</code> 权限。</p>
+<h2 id="unity-catalog_2">Unity Catalog 与我们现有方案的关联<a class="headerlink" href="#unity-catalog_2" title="Permanent link">&para;</a></h2>
+<p>Unity Catalog 的 metastore 类似于 HMS，存储元数据，权限管控类似 Ranger，血缘及数据发现类似 Datahub，模型治理功能是集成了MLflow的模型注册功能，可以说 Unity Catalog 是 HMS、Ranger、Datahub、MLflow 的集合。</p>
 
     <!-- Last update of source file -->
     
@@ -1289,7 +1128,7 @@ as the main headline.
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2024-04-22 10:56:04</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2024-06-06 02:45:33</span>
   </span>
 
     
@@ -1299,7 +1138,7 @@ as the main headline.
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2024-04-22 10:51:03</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2024-06-06 02:45:33</span>
   </span>
 
     
@@ -1383,7 +1222,7 @@ as the main headline.
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../dqc_design/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Dqc design">
+          <a href="../../../toc/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 目录">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1393,20 +1232,20 @@ as the main headline.
                 上一页
               </span>
               <div class="md-ellipsis">
-                Dqc design
+                目录
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../ldap/ldap/" class="md-footer__link md-footer__link--next" aria-label="下一页: datahub-project 通过LDAP登陆">
+          <a href="../../cube-js/overview/" class="md-footer__link md-footer__link--next" aria-label="下一页: Overview">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                datahub-project 通过LDAP登陆
+                Overview
               </div>
             </div>
             <div class="md-footer__button md-icon">
