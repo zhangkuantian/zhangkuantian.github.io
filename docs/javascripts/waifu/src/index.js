@@ -175,4 +175,4 @@ function initWidget(config, apiPath) {
     }
 }
 
-export default initWidget;
+//export default initWidget;
