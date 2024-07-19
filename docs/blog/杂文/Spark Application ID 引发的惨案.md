@@ -9,10 +9,9 @@ Spark 3.3 之前，Spark Application ID 的默认生成格式: ```"spark-applica
 
 解决方案:
 - 将 image 升级到 3.3 版本（比较困难，需要做很多验证工作）
-- 在 3.2 上打 patch
-- 在 dbt 测自定义 app_id
+- 在 3.2 上打 patch, 将 app_id 的格式替换成: ```"spark-app-" + System.currentTimeMillis + "-" + UUID.randomUUID().toString()```
+- 在 dbt 测自定义 app_id, spark.app.id = ```"spark-app-" + System.currentTimeMillis + "-" + UUID.randomUUID().toString()```
 
-目前的这三个方案中，我们选择了第三个，改起来简单
-
+目前的这三个方案中，我们选择了第三个，改起来简单，个人更倾向于第二种方案，成本低且在一段时间内能够一劳永逸
 
 
