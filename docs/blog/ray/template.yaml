@@ -1,0 +1,155 @@
+apiVersion: ray.io/v1
+kind: RayJob
+metadata:
+  name: {{ task_instance.task_id.replace("_", "-") }}-{{ execution_date.strftime('%Y%m%d') }}-{{ task_instance.try_number }}
+  labels:
+    alibabacloud.com/eci: "true"
+  annotations:
+    k8s.aliyun.com/eci-ram-role-name: "AliyunECSInstanceForEMRRole"
+    k8s.aliyun.com/eci-spot-strategy: "SpotAsPriceGo"
+    k8s.aliyun.com/eci-spot-fallback: "true"
+    k8s.aliyun.com/eci-image-snapshot-id: "imc-xxxxx"
+spec:
+  entrypoint: python /opt/sqldwh-dbt/repo/data-set/models/dw_dwd/infra/{{ task_instance.task_id }}/{{ task_instance.task_id }}.py --ds='{{ execution_date.strftime('%Y%m%d') }}' --execution-date='{{ execution_date }}' --execution-date-ios='{{ execution_date.isoformat(sep=" ", timespec="seconds") }}' --oss-secret='xxxxx'
+  shutdownAfterJobFinishes: false
+#  ttlSecondsAfterFinished: 60
+  runtimeEnvYAML: |
+    pip:
+      - PyHive==0.7.0
+      - xgboost==2.1.1
+      - ossfs==2023.12.0
+      - hdbscan==0.8.38.post2
+    working_dir: /opt/sqldwh-dbt/repo/data-set/models/dw_dwd/infra/{{ task_instance.task_id }}
+    env_vars:
+      SPARK_CONF_DIR: "/etc/spark/conf"
+
+  rayClusterSpec:
+    rayVersion: '2.9.0'
+    headGroupSpec:
+      rayStartParams:
+        dashboard-host: '0.0.0.0'
+      template:
+        metadata:
+          labels:
+            alibabacloud.com/eci: "true"
+          annotations:
+            k8s.aliyun.com/eci-spot-strategy: "SpotAsPriceGo"
+            k8s.aliyun.com/eci-ram-role-name: "AliyunECSInstanceForEMRRole"
+            sidecar.istio.io/inject: "false"
+        spec:
+          serviceAccountName: spark
+          containers:
+            - name: ray-head
+              image: raydp:2.9.0
+              imagePullPolicy: Always
+              env:
+                - name: SPARK_CONF_DIR
+                  value: /etc/spark/conf
+              ports:
+                - containerPort: 6379
+                  name: gcs-server
+                - containerPort: 8265 # Ray dashboard
+                  name: dashboard
+                - containerPort: 10001
+                  name: client
+              resources:
+                limits:
+                  cpu: "3"
+                  memory: "13G"
+                requests:
+                  cpu: "3"
+                  memory: "13G"
+              volumeMounts:
+                - name: sqldwh-dbt
+                  mountPath: "/opt/sqldwh-dbt"
+                - name: spark-defaults
+                  mountPath: /etc/spark/conf
+                  readOnly: true
+          volumes:
+            - name: spark-defaults
+              configMap:
+                name: emr-spark-defaults-conf-3.2.1-1.1.6-ray
+            - name: sqldwh-dbt
+              persistentVolumeClaim:
+                claimName: sqldwh-dbt-workspace
+
+    workerGroupSpecs:
+      - replicas: 5
+        minReplicas: 1
+        maxReplicas: 10
+        groupName: small-group
+        rayStartParams: {}
+        #pod template
+        template:
+          metadata:
+            labels:
+              alibabacloud.com/eci: "true"
+            annotations:
+              k8s.aliyun.com/eci-spot-strategy: "SpotAsPriceGo"
+              k8s.aliyun.com/eci-ram-role-name: "AliyunECSInstanceForEMRRole"
+              sidecar.istio.io/inject: "false"
+          spec:
+            serviceAccountName: spark
+            containers:
+              - name: ray-worker
+                image: raydp:2.9.0
+                imagePullPolicy: Always
+                env:
+                  - name: SPARK_CONF_DIR
+                    value: /etc/spark/conf
+                lifecycle:
+                  preStop:
+                    exec:
+                      command: [ "/bin/sh","-c","ray stop" ]
+                resources:
+                  limits:
+                    cpu: "3"
+                    memory: "13G"
+                  requests:
+                    cpu: "3"
+                    memory: "13G"
+                volumeMounts:
+                  - name: sqldwh-dbt
+                    mountPath: "/opt/sqldwh-dbt"
+                  - name: spark-defaults
+                    mountPath: /etc/spark/conf
+                    readOnly: true
+            volumes:
+              - name: spark-defaults
+                configMap:
+                  name: emr-spark-defaults-conf-3.2.1-1.1.6-ray
+              - name: sqldwh-dbt
+                persistentVolumeClaim:
+                  claimName: sqldwh-dbt-workspace
+
+  submitterPodTemplate:
+    metadata:
+      labels:
+        alibabacloud.com/eci: "true"
+      annotations:
+        k8s.aliyun.com/eci-spot-strategy: "SpotAsPriceGo"
+        k8s.aliyun.com/eci-ram-role-name: "AliyunECSInstanceForEMRRole"
+        sidecar.istio.io/inject: "false"
+    spec:
+      restartPolicy: Never
+      serviceAccountName: spark
+      containers:
+        - name: rayjob-submitter-pod
+          image: raydp:2.9.0
+          imagePullPolicy: Always
+          env:
+            - name: SPARK_CONF_DIR
+              value: /etc/spark/conf
+          volumeMounts:
+            - name: sqldwh-dbt
+              mountPath: "/opt/sqldwh-dbt"
+            - name: spark-defaults
+              mountPath: /etc/spark/conf
+              readOnly: true
+      volumes:
+        - name: spark-defaults
+          configMap:
+            name: emr-spark-defaults-conf-3.2.1-1.1.6-ray
+        - name: sqldwh-dbt
+          persistentVolumeClaim:
+            claimName: sqldwh-dbt-workspace
