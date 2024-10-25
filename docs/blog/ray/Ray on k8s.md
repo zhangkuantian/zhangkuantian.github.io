@@ -1,4 +1,4 @@
-## Ray on k8s 在 Data-eng 中的应用
+## Ray on k8s 在 Data-ENG 中的应用
 
 ### 使用 aliyun spot eci 启动 Ray Worker
 ```yaml
@@ -34,8 +34,8 @@ worker:
       memory: "4G"
 ```
 
-### 使用 aliyun spot eci 启动 Ray per job
-
+### 使用 aliyun spot eci 启动 Ray Per Job
+模版见 [aliyun spot eci 启 ray perjob 模板](template.yaml)
 
 
 
