@@ -12,13 +12,13 @@
         <meta name="author" content="kuantian.zhang">
       
       
-        <link rel="canonical" href="https://zhangkuantian.github.io/blog/catalog/Unity%20Catalog%20%E8%B0%83%E7%A0%94/">
+        <link rel="canonical" href="https://zhangkuantian.github.io/blog/%E6%9D%82%E6%96%87/DuckDB/">
       
       
-        <link rel="prev" href="../../../toc/">
+        <link rel="prev" href="../Could%20not%20resolve%20host%3A%20mirrorlist.centos.org%3B%20Unknown%20error/">
       
       
-        <link rel="next" href="../../clickhouse/clickhouse%20%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/">
+        <link rel="next" href="../Spark%20Application%20ID%20%E5%BC%95%E5%8F%91%E7%9A%84%E6%83%A8%E6%A1%88/">
       
       
       <link rel="icon" href="../../../assets/favicon.webp">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Unity Catalog 调研 - kuantian.zhang's Web</title>
+        <title>DuckDB load plugin 使用不当导致的任务集体失败 - kuantian.zhang's Web</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#duckdb-load-plugin" class="md-skip">
           跳转至
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Unity Catalog 调研
+              DuckDB load plugin 使用不当导致的任务集体失败
             
           </span>
         </div>
@@ -293,7 +293,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../../catalog/Unity%20Catalog%20%E8%B0%83%E7%A0%94/" class="md-tabs__link">
           
   
   Blog
@@ -458,21 +458,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
         
           
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
@@ -486,7 +484,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_1">
             <span class="md-nav__icon md-icon"></span>
             Catalog
@@ -497,28 +495,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Unity Catalog 调研
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../catalog/Unity%20Catalog%20%E8%B0%83%E7%A0%94/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -527,138 +507,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      背景
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unity-catalog" class="md-nav__link">
-    <span class="md-ellipsis">
-      什么是 Unity Catalog?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      功能
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unity-catalog_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unity Catalog 对象模型
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Unity Catalog 对象模型">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#metastore" class="md-nav__link">
-    <span class="md-ellipsis">
-      Metastore
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#catalog" class="md-nav__link">
-    <span class="md-ellipsis">
-      Catalog
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#schemas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schemas
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#volumes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Volumes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tables
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#views" class="md-nav__link">
-    <span class="md-ellipsis">
-      Views
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Models
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unity-catalog_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unity Catalog 与我们现有方案的关联
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1201,19 +1049,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" checked>
         
           
           <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
@@ -1227,7 +1077,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_9">
             <span class="md-nav__icon md-icon"></span>
             杂文
@@ -1241,7 +1091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%9D%82%E6%96%87/Could%20not%20resolve%20host%3A%20mirrorlist.centos.org%3B%20Unknown%20error/" class="md-nav__link">
+      <a href="../Could%20not%20resolve%20host%3A%20mirrorlist.centos.org%3B%20Unknown%20error/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1259,10 +1109,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../%E6%9D%82%E6%96%87/DuckDB/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    DuckDB load plugin 使用不当导致的任务集体失败
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1271,6 +1141,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      过程
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fix 思路
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1283,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%9D%82%E6%96%87/Spark%20Application%20ID%20%E5%BC%95%E5%8F%91%E7%9A%84%E6%83%A8%E6%A1%88/" class="md-nav__link">
+      <a href="../Spark%20Application%20ID%20%E5%BC%95%E5%8F%91%E7%9A%84%E6%83%A8%E6%A1%88/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1304,7 +1221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%9D%82%E6%96%87/timestamp%20%E5%BC%95%E8%B5%B7%E7%9A%84%E6%83%A8%E6%A1%88/" class="md-nav__link">
+      <a href="../timestamp%20%E5%BC%95%E8%B5%B7%E7%9A%84%E6%83%A8%E6%A1%88/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1350,6 +1267,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1367,105 +1286,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#unity-catalog" class="md-nav__link">
-    <span class="md-ellipsis">
-      什么是 Unity Catalog?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      功能
+      过程
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#unity-catalog_1" class="md-nav__link">
+  <a href="#fix" class="md-nav__link">
     <span class="md-ellipsis">
-      Unity Catalog 对象模型
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Unity Catalog 对象模型">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#metastore" class="md-nav__link">
-    <span class="md-ellipsis">
-      Metastore
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#catalog" class="md-nav__link">
-    <span class="md-ellipsis">
-      Catalog
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#schemas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schemas
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#volumes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Volumes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tables
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#views" class="md-nav__link">
-    <span class="md-ellipsis">
-      Views
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Models
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unity-catalog_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unity Catalog 与我们现有方案的关联
+      Fix 思路
     </span>
   </a>
   
@@ -1490,8 +1322,6 @@ doesn't, the page title (or respectively site name) is used
 as the main headline.
 -->
 
-    <h1>Unity Catalog 调研</h1>
-
 
 <!-- Markdown content -->
 
@@ -1499,44 +1329,16 @@ as the main headline.
 
     
 
-    <h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>数据湖里的数据和表越来越多，包括训练里的模型也越来越多，如何将模型和表管理起来，变得更加麻烦，需要一个统一的平台进行管理。目前业界商用SaaS平台里 Databricks 的 Unity Catalog 做得比较好，开源的 DataHub 也是做统一Catalog 的</p>
-<h2 id="unity-catalog">什么是 Unity Catalog?<a class="headerlink" href="#unity-catalog" title="Permanent link">&para;</a></h2>
-<p>Unity Catalog 是一个统一的大数据 + AI 资产治理解决方案，提供跨 workspace 的权限管控、审计、数据血缘及数据发现功能。</p>
-<p>大致结构如下图:</p>
-<p><a class="glightbox" href="../images/img.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="结构图" src="../images/img.png" /></a></p>
-<h2 id="_2">功能<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Define once, secure everywhere</strong>：统一的 ACL 管控，只需要在一处定义 ACL Policy 就可以在所有的 workspace 中使用了</li>
-<li><strong>Standards-compliant security model</strong>：标准的 ANSI SQL 安全模型，管理员可以使用标准的 SQL 语法为 Catalog、Schema、Table 和 View 执行权限操作</li>
-<li><strong>Built-in auditing and lineage</strong>：自动采集user级别的审计日志，自动采集数据血缘</li>
-<li><strong>Data discovery</strong>：允许用户给数据集打标签和添加描述信息，提供搜索界面帮助数据消费者查找数据</li>
-<li><strong>System tables (Public Preview)</strong>：允许用户访问和查询账户的操作数据，包括审计日志、账单数据及血缘数据</li>
-</ul>
-<h2 id="unity-catalog_1">Unity Catalog 对象模型<a class="headerlink" href="#unity-catalog_1" title="Permanent link">&para;</a></h2>
-<p>Unity Catalog 对象模型自顶向下分别是: <strong>Metastore ——&gt; Catalog ——&gt; Schema ——&gt; Table、View、Volume、Function、Model</strong></p>
-<p>如下图：</p>
-<p><a class="glightbox" href="../images/img_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="对象模型图" src="../images/img_1.png" /></a></p>
-<p>其中 Volume 主要是用于管理非结构化数据、Model 用于管理ML模型, 需要在 <a href="https://www.mlflow.org/docs/latest/model-registry.html">MLflow Model Registry</a> 中注册才能采集到。</p>
-<h3 id="metastore">Metastore<a class="headerlink" href="#metastore" title="Permanent link">&para;</a></h3>
-<p>Unity Catalog 的顶层Container， 用于存储关于数据资产 (表、视图、卷、模型等) 的元数据，以及管理对这些数据资产访问权限的权限信息。</p>
-<h3 id="catalog">Catalog<a class="headerlink" href="#catalog" title="Permanent link">&para;</a></h3>
-<p>Unity Catalog 三层 namespace 结构中的第一层，用于组织用户数据资产，用户可以查看所有被授予 <code>UER CATALOG</code> 权限的 catalog。</p>
-<h3 id="schemas">Schemas<a class="headerlink" href="#schemas" title="Permanent link">&para;</a></h3>
-<p>Schema 是 Unity Catalog 三层 namespace 中的第二层，用于组织表和视图。用户可以查看在 schema 的父catalog 中拥有 <code>USE CATALOG</code> 权限，在schema中用于 <code>USE SCHEMA</code> 权限的所有schema 列表。如果用户拥有表和视图的<code>SELECT</code>权限，就可以访问或者 list 该 schema 下的表和视图。</p>
-<h3 id="volumes">Volumes<a class="headerlink" href="#volumes" title="Permanent link">&para;</a></h3>
-<p>volumes 处于 Unity Catalog 三层 namespace 中的第三层，与表、视图及其他由 schema 组织的 object 属于同级关系。volumes 包含以任意格式存储的数据目录和文件，volume 提供对数据的非表格访问，volume 中的数据文件不能被注册成为表格。
-要创建 volume ，用户必须具有 <code>CREATE VOLUME</code> 和 <code>USE SCHEMA</code> 权限，且必须具有对应 catalog 的 <code>USE CATALOG</code> 权限。
-要读取 volume 中的文件和目录，用户必须具有 <code>READ VOLUME</code> 权限，且具有对应 schema 和 catalog 的 <code>USE SCHEMA</code> 和 <code>USE CATALOG</code> 权限。
-要添加 、删除、修改 volume 的文件或者目录，用户必须具有 <code>WRITE VOLUME</code> 权限，且必须具有对应schema 和 catalog 的 <code>USE SCHEMA</code> 和 <code>USE CATALOG</code> 权限。</p>
-<h3 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">&para;</a></h3>
-<p>table 处于 Unity Catalog 三层 namespace 中的第三层，用于管理表格数据。要创建表，用户必须具有 CREATE 权限及对应 schema 和 catalog 的 <code>USE SCHEMA</code> 和 <code>USE CATALOG</code> 权限。要查询表，用户必须具有 <code>SELECT</code> 权限及对应 schema 和 catalog 的 <code>USE SCHEMA</code> 和 <code>USE CATALOG</code> 权限。要修改或者删除表，用户必须具有相应的 <code>ALTER</code>、<code>DROP</code> 权限。table 跟普通数据湖一样，分 <code>managed table</code> 和 <code>external table</code>。</p>
-<h3 id="views">Views<a class="headerlink" href="#views" title="Permanent link">&para;</a></h3>
-<p>view 是基于 metastore 中的表或者其他 view 创建的只读对象，处于 Unity Catalog 中的第三层。用户可以基于不同的 schema 和 catalog 中的表或者视图来创建 view，用户也可以通过创建 dynamic view 来实现行级或者列级权限管控。</p>
-<h3 id="models">Models<a class="headerlink" href="#models" title="Permanent link">&para;</a></h3>
-<p>model 处于 Unity Catalog 三层 namespace 中的第三层，unity catalog 中的 model 是指在 <a href="https://www.mlflow.org/docs/latest/model-registry.html">MLflow Model Registry</a> 中注册的机器学习模型，要在 Unity Catalog 中创建model，用户需要在对应的 schema 和 catalog 中拥有 <code>CREATE MODEL</code> 权限，同时还需要拥有对应 schema 和 catalog 的 <code>USE SCHEMA</code> 和 <code>USE CATALOG</code> 权限。</p>
-<h2 id="unity-catalog_2">Unity Catalog 与我们现有方案的关联<a class="headerlink" href="#unity-catalog_2" title="Permanent link">&para;</a></h2>
-<p>Unity Catalog 的 metastore 类似于 HMS，存储元数据，权限管控类似 Ranger，血缘及数据发现类似 Datahub，模型治理功能是集成了MLflow的模型注册功能，可以说 Unity Catalog 是 HMS、Ranger、Datahub、MLflow 的集合。</p>
+    <h1 id="duckdb-load-plugin">DuckDB load plugin 使用不当导致的任务集体失败<a class="headerlink" href="#duckdb-load-plugin" title="Permanent link">&para;</a></h1>
+<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>我们有一堆任务使用了 duckdb 来拉取 http 接口的数据，每个任务之前都需要下载一遍 http_extension 安装报，最近为了降本增效，我们部分可用区的公网带宽被降级了，导致download 失败，后续一堆任务全挂了</p>
+<h2 id="_2">过程<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>在每次通过 duckdb 来拉取http接口数据时，都需要下载 http_extension，以前任务都是几分钟就跑完了，我们设置的任务超时时间是15分钟，最近几天任务都出现超时情况，超时之前任务都没有出现异常日志，
+重新clear airflow 任务也不会成功，但是在接口机执行任务时，任务很快就跑完了，怀疑是出问题的可用区机器有问题，重启 airflow 任务，将任务的可用区改为跟接口机相同的可用区，发现任务很快就跑完了。
+  重新提交任务，在任务的每个步骤都打印日志，发现任务主要卡死在 duckdb 拉取 http_extension 这一步。进入到 出问题任务的 Pod 上执行 curl -O xxxx.gz 也无法执行，ping google 和 github 都没有反应，确定该可用区
+已经没有公网网络。</p>
+<h2 id="fix">Fix 思路<a class="headerlink" href="#fix" title="Permanent link">&para;</a></h2>
+<p>确定无法访问公网之后，接下来的问题就是怎么加载 http_extension 的问题了。目前我们的办法是直接把 http_extension 打到 docker image 中，通过 <code>LOAD '/opt/external-tools/httpfs.duckdb_extension';</code> 加载</p>
 
     <!-- Last update of source file -->
     
@@ -1563,7 +1365,7 @@ as the main headline.
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2024-06-06 02:45:33</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2025-02-24 12:17:27</span>
   </span>
 
     
@@ -1573,7 +1375,7 @@ as the main headline.
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2024-06-06 02:45:33</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2025-02-24 12:17:27</span>
   </span>
 
     
@@ -1657,7 +1459,7 @@ as the main headline.
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../../toc/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 目录">
+          <a href="../Could%20not%20resolve%20host%3A%20mirrorlist.centos.org%3B%20Unknown%20error/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Could not resolve host: mirrorlist.centos.org; Unknown error">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1667,20 +1469,20 @@ as the main headline.
                 上一页
               </span>
               <div class="md-ellipsis">
-                目录
+                Could not resolve host: mirrorlist.centos.org; Unknown error
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../clickhouse/clickhouse%20%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/" class="md-footer__link md-footer__link--next" aria-label="下一页: ClickHouse 操作记录">
+          <a href="../Spark%20Application%20ID%20%E5%BC%95%E5%8F%91%E7%9A%84%E6%83%A8%E6%A1%88/" class="md-footer__link md-footer__link--next" aria-label="下一页: Spark Application ID 引发的惨案">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                ClickHouse 操作记录
+                Spark Application ID 引发的惨案
               </div>
             </div>
             <div class="md-footer__button md-icon">
