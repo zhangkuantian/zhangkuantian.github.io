@@ -12,13 +12,13 @@
         <meta name="author" content="kuantian.zhang">
       
       
-        <link rel="canonical" href="https://zhangkuantian.github.io/blog/%E6%9D%82%E6%96%87/DuckDB/">
+        <link rel="canonical" href="https://zhangkuantian.github.io/blog/%E6%9D%82%E6%96%87/redis%E4%B8%8D%E9%87%8A%E6%94%BE%E5%AF%BC%E8%87%B4%E7%9A%84%E5%86%85%E5%AD%98%E5%8D%A0%E6%BB%A1/">
       
       
-        <link rel="prev" href="../Could%20not%20resolve%20host%3A%20mirrorlist.centos.org%3B%20Unknown%20error/">
+        <link rel="prev" href="../dbt-spark%20session%20%E8%B5%B7%E4%B8%8D%E6%9D%A5/">
       
       
-        <link rel="next" href="../Spark%20Application%20ID%20%E5%BC%95%E5%8F%91%E7%9A%84%E6%83%A8%E6%A1%88/">
+        <link rel="next" href="../timestamp%20%E5%BC%95%E8%B5%B7%E7%9A%84%E6%83%A8%E6%A1%88/">
       
       
       <link rel="icon" href="../../../assets/favicon.webp">
@@ -26,7 +26,7 @@
     
     
       
-        <title>DuckDB load plugin 使用不当导致的任务集体失败 - kuantian.zhang's Web</title>
+        <title>Redis不释放导致的内存占满 - kuantian.zhang's Web</title>
       
     
     
@@ -88,11 +88,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#duckdb-load-plugin" class="md-skip">
-          跳转至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -123,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DuckDB load plugin 使用不当导致的任务集体失败
+              Redis不释放导致的内存占满
             
           </span>
         </div>
@@ -1109,30 +1104,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    DuckDB load plugin 使用不当导致的任务集体失败
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../DuckDB/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1141,53 +1116,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      背景
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      过程
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fix" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fix 思路
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1239,10 +1167,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../redis%E4%B8%8D%E9%87%8A%E6%94%BE%E5%AF%BC%E8%87%B4%E7%9A%84%E5%86%85%E5%AD%98%E5%8D%A0%E6%BB%A1/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1251,6 +1186,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1309,43 +1245,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      背景
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      过程
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fix" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fix 思路
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1364,6 +1263,8 @@ doesn't, the page title (or respectively site name) is used
 as the main headline.
 -->
 
+    <h1>Redis不释放导致的内存占满</h1>
+
 
 <!-- Markdown content -->
 
@@ -1371,16 +1272,54 @@ as the main headline.
 
     
 
-    <h1 id="duckdb-load-plugin">DuckDB load plugin 使用不当导致的任务集体失败<a class="headerlink" href="#duckdb-load-plugin" title="Permanent link">&para;</a></h1>
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>我们有一堆任务使用了 duckdb 来拉取 http 接口的数据，每个任务之前都需要下载一遍 http_extension 安装报，最近为了降本增效，我们部分可用区的公网带宽被降级了，导致download 失败，后续一堆任务全挂了</p>
-<h2 id="_2">过程<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>在每次通过 duckdb 来拉取http接口数据时，都需要下载 http_extension，以前任务都是几分钟就跑完了，我们设置的任务超时时间是15分钟，最近几天任务都出现超时情况，超时之前任务都没有出现异常日志，
-重新clear airflow 任务也不会成功，但是在接口机执行任务时，任务很快就跑完了，怀疑是出问题的可用区机器有问题，重启 airflow 任务，将任务的可用区改为跟接口机相同的可用区，发现任务很快就跑完了。
-  重新提交任务，在任务的每个步骤都打印日志，发现任务主要卡死在 duckdb 拉取 http_extension 这一步。进入到 出问题任务的 Pod 上执行 curl -O xxxx.gz 也无法执行，ping google 和 github 都没有反应，确定该可用区
-已经没有公网网络。</p>
-<h2 id="fix">Fix 思路<a class="headerlink" href="#fix" title="Permanent link">&para;</a></h2>
-<p>确定无法访问公网之后，接下来的问题就是怎么加载 http_extension 的问题了。目前我们的办法是直接把 http_extension 打到 docker image 中，通过 <code>LOAD '/opt/external-tools/httpfs.duckdb_extension';</code> 加载</p>
+    <p>我们有一部分上古时代的 flink 任务是用传统的 DataStream API 写的，最近有tx 去修改的时候，使用 JedisPool 时，没有显示 close，导致在 Redis 连接不释放，代码如下:</p>
+<div class="highlight"><pre><span></span><code><span class="n">DataStream</span><span class="o">&lt;</span><span class="n">VehcileLatestState</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dataStream</span><span class="w"> </span><span class="o">=</span>
+<span class="w">          </span><span class="n">tableEnv</span>
+<span class="w">              </span><span class="p">.</span><span class="na">toDataStream</span><span class="p">(</span><span class="n">source_table</span><span class="p">)</span>
+<span class="w">              </span><span class="p">.</span><span class="na">flatMap</span><span class="p">(</span>
+<span class="w">                  </span><span class="k">new</span><span class="w"> </span><span class="n">RichFlatMapFunction</span><span class="o">&lt;</span><span class="n">Row</span><span class="p">,</span><span class="w"> </span><span class="n">VehcileLatestState</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                      </span><span class="n">ObjectMapper</span><span class="w"> </span><span class="n">objectMapper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectMapper</span><span class="p">();</span>
+<span class="w">                      </span><span class="n">JedisPool</span><span class="w"> </span><span class="n">jedisPool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="w">                      </span><span class="nd">@Override</span>
+<span class="w">                      </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">open</span><span class="p">(</span><span class="n">Configuration</span><span class="w"> </span><span class="n">parameters</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                          </span><span class="n">jedisPool</span><span class="w"> </span><span class="o">=</span>
+<span class="w">                              </span><span class="k">new</span><span class="w"> </span><span class="n">JedisPool</span><span class="p">(</span>
+<span class="w">                                  </span><span class="k">new</span><span class="w"> </span><span class="n">GenericObjectPoolConfig</span><span class="o">&lt;</span><span class="n">Jedis</span><span class="o">&gt;</span><span class="p">(),</span>
+<span class="w">                                  </span><span class="s">&quot;r-xx.redis.rds.xxx.com&quot;</span><span class="p">,</span>
+<span class="w">                                  </span><span class="mi">6379</span><span class="p">,</span>
+<span class="w">                                  </span><span class="mi">2000</span><span class="p">,</span>
+<span class="w">                                  </span><span class="s">&quot;zzzz==&quot;</span><span class="p">);</span>
+<span class="w">                      </span><span class="p">}</span>
+
+<span class="w">                      </span><span class="nd">@Override</span>
+<span class="w">                      </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">flatMap</span><span class="p">(</span><span class="n">Row</span><span class="w"> </span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">Collector</span><span class="o">&lt;</span><span class="n">VehcileLatestState</span><span class="o">&gt;</span><span class="w"> </span><span class="n">collector</span><span class="p">)</span>
+<span class="w">                          </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                          </span><span class="kt">long</span><span class="w"> </span><span class="n">partitionId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">                          </span><span class="kt">long</span><span class="w"> </span><span class="n">kafkaOffset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">                          </span><span class="n">String</span><span class="w"> </span><span class="n">kafkaTimestamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1970-01-01 00:00:00&quot;</span><span class="p">;</span>
+<span class="w">                          </span><span class="n">xxxx</span>
+<span class="w">                          </span><span class="n">heartbeat</span><span class="p">.</span><span class="na">setHeartbeat_v2</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">                          </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">Jedis</span><span class="w"> </span><span class="n">jedis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jedisPool</span><span class="p">.</span><span class="na">getResource</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                              </span><span class="n">String</span><span class="w"> </span><span class="n">lastTimeKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%s_%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">heartbeat</span><span class="p">.</span><span class="na">getVehicle_vin</span><span class="p">(),</span><span class="w"> </span><span class="n">Constants</span><span class="p">.</span><span class="na">VEHICLE_LATEST_TIME_KEY_TAIL</span><span class="p">);</span>
+<span class="w">                              </span><span class="n">String</span><span class="w"> </span><span class="n">latestTimestamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jedis</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">lastTimeKey</span><span class="p">);</span>
+<span class="w">                              </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kc">null</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">latestTimestamp</span>
+<span class="w">                                  </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">Long</span><span class="p">.</span><span class="na">parseLong</span><span class="p">(</span><span class="n">latestTimestamp</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">heartbeat</span><span class="p">.</span><span class="na">getCurrent_timestamp_seconds</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                  </span><span class="n">heartbeat</span><span class="p">.</span><span class="na">setOut_order</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">                              </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                  </span><span class="n">heartbeat</span><span class="p">.</span><span class="na">setOut_order</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">                                  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">heartbeat</span><span class="p">.</span><span class="na">isDirty</span><span class="p">()</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="kc">null</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">heartbeat</span><span class="p">.</span><span class="na">getDirty_reason</span><span class="p">()</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="n">heartbeat</span><span class="p">.</span><span class="na">getDirty_reason</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">Constants</span><span class="p">.</span><span class="na">PARSE_EXCEPTION</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                      </span><span class="n">String</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%s_%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">heartbeat</span><span class="p">.</span><span class="na">getVehicle_vin</span><span class="p">(),</span><span class="w"> </span><span class="n">Constants</span><span class="p">.</span><span class="na">VEHICLE_LATEST_STATE_KEY_TAIL</span><span class="p">);</span>
+<span class="w">                                      </span><span class="n">jedis</span><span class="p">.</span><span class="na">setex</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">24</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="n">objectMapper</span><span class="p">.</span><span class="na">writeValueAsString</span><span class="p">(</span><span class="n">heartbeat</span><span class="p">));</span>
+<span class="w">                                  </span><span class="p">}</span>
+<span class="w">                                  </span><span class="n">jedis</span><span class="p">.</span><span class="na">setex</span><span class="p">(</span><span class="n">lastTimeKey</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="n">heartbeat</span><span class="p">.</span><span class="na">getCurrent_timestamp_seconds</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="w">                              </span><span class="p">}</span>
+<span class="w">                          </span><span class="p">}</span>
+<span class="w">                          </span><span class="n">collector</span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">heartbeat</span><span class="p">);</span>
+<span class="w">                      </span><span class="p">}</span>
+<span class="w">                  </span><span class="p">});</span>
+</code></pre></div>
+<p>代码中 Jedis 是释放了，但是 JedisPool 没有释放，导致redis 连接不释放。</p>
 
     <!-- Last update of source file -->
     
@@ -1407,7 +1346,7 @@ as the main headline.
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2025-02-24 12:17:27</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2025-06-26 07:19:53</span>
   </span>
 
     
@@ -1417,7 +1356,7 @@ as the main headline.
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2025-02-24 12:17:27</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2025-06-26 07:19:53</span>
   </span>
 
     
@@ -1501,7 +1440,7 @@ as the main headline.
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../Could%20not%20resolve%20host%3A%20mirrorlist.centos.org%3B%20Unknown%20error/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Could not resolve host: mirrorlist.centos.org; Unknown error">
+          <a href="../dbt-spark%20session%20%E8%B5%B7%E4%B8%8D%E6%9D%A5/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Dbt spark session 起不来">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1511,20 +1450,20 @@ as the main headline.
                 上一页
               </span>
               <div class="md-ellipsis">
-                Could not resolve host: mirrorlist.centos.org; Unknown error
+                Dbt spark session 起不来
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Spark%20Application%20ID%20%E5%BC%95%E5%8F%91%E7%9A%84%E6%83%A8%E6%A1%88/" class="md-footer__link md-footer__link--next" aria-label="下一页: Spark Application ID 引发的惨案">
+          <a href="../timestamp%20%E5%BC%95%E8%B5%B7%E7%9A%84%E6%83%A8%E6%A1%88/" class="md-footer__link md-footer__link--next" aria-label="下一页: Timestamp 引起的惨案">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Spark Application ID 引发的惨案
+                Timestamp 引起的惨案
               </div>
             </div>
             <div class="md-footer__button md-icon">

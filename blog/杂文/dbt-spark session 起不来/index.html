@@ -12,13 +12,13 @@
         <meta name="author" content="kuantian.zhang">
       
       
-        <link rel="canonical" href="https://zhangkuantian.github.io/blog/%E6%9D%82%E6%96%87/DuckDB/">
+        <link rel="canonical" href="https://zhangkuantian.github.io/blog/%E6%9D%82%E6%96%87/dbt-spark%20session%20%E8%B5%B7%E4%B8%8D%E6%9D%A5/">
       
       
-        <link rel="prev" href="../Could%20not%20resolve%20host%3A%20mirrorlist.centos.org%3B%20Unknown%20error/">
+        <link rel="prev" href="../Spark%20Application%20ID%20%E5%BC%95%E5%8F%91%E7%9A%84%E6%83%A8%E6%A1%88/">
       
       
-        <link rel="next" href="../Spark%20Application%20ID%20%E5%BC%95%E5%8F%91%E7%9A%84%E6%83%A8%E6%A1%88/">
+        <link rel="next" href="../redis%E4%B8%8D%E9%87%8A%E6%94%BE%E5%AF%BC%E8%87%B4%E7%9A%84%E5%86%85%E5%AD%98%E5%8D%A0%E6%BB%A1/">
       
       
       <link rel="icon" href="../../../assets/favicon.webp">
@@ -26,7 +26,7 @@
     
     
       
-        <title>DuckDB load plugin 使用不当导致的任务集体失败 - kuantian.zhang's Web</title>
+        <title>Dbt spark session 起不来 - kuantian.zhang's Web</title>
       
     
     
@@ -88,11 +88,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#duckdb-load-plugin" class="md-skip">
-          跳转至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -123,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DuckDB load plugin 使用不当导致的任务集体失败
+              Dbt spark session 起不来
             
           </span>
         </div>
@@ -1109,30 +1104,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    DuckDB load plugin 使用不当导致的任务集体失败
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../DuckDB/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1141,53 +1116,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      背景
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      过程
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fix" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fix 思路
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1218,10 +1146,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../dbt-spark%20session%20%E8%B5%B7%E4%B8%8D%E6%9D%A5/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1230,6 +1165,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1309,43 +1245,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      背景
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      过程
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fix" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fix 思路
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1364,6 +1263,8 @@ doesn't, the page title (or respectively site name) is used
 as the main headline.
 -->
 
+    <h1>Dbt spark session 起不来</h1>
+
 
 <!-- Markdown content -->
 
@@ -1371,16 +1272,18 @@ as the main headline.
 
     
 
-    <h1 id="duckdb-load-plugin">DuckDB load plugin 使用不当导致的任务集体失败<a class="headerlink" href="#duckdb-load-plugin" title="Permanent link">&para;</a></h1>
-<h2 id="_1">背景<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>我们有一堆任务使用了 duckdb 来拉取 http 接口的数据，每个任务之前都需要下载一遍 http_extension 安装报，最近为了降本增效，我们部分可用区的公网带宽被降级了，导致download 失败，后续一堆任务全挂了</p>
-<h2 id="_2">过程<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>在每次通过 duckdb 来拉取http接口数据时，都需要下载 http_extension，以前任务都是几分钟就跑完了，我们设置的任务超时时间是15分钟，最近几天任务都出现超时情况，超时之前任务都没有出现异常日志，
-重新clear airflow 任务也不会成功，但是在接口机执行任务时，任务很快就跑完了，怀疑是出问题的可用区机器有问题，重启 airflow 任务，将任务的可用区改为跟接口机相同的可用区，发现任务很快就跑完了。
-  重新提交任务，在任务的每个步骤都打印日志，发现任务主要卡死在 duckdb 拉取 http_extension 这一步。进入到 出问题任务的 Pod 上执行 curl -O xxxx.gz 也无法执行，ping google 和 github 都没有反应，确定该可用区
-已经没有公网网络。</p>
-<h2 id="fix">Fix 思路<a class="headerlink" href="#fix" title="Permanent link">&para;</a></h2>
-<p>确定无法访问公网之后，接下来的问题就是怎么加载 http_extension 的问题了。目前我们的办法是直接把 http_extension 打到 docker image 中，通过 <code>LOAD '/opt/external-tools/httpfs.duckdb_extension';</code> 加载</p>
+    <p>我们从 2023 年年底引入 DBT，2024 年开始大规模迁入，到2025-06 初，DBT 任务量达到 4000+，都在一个 repo 里</p>
+<p>每次 Merge 一个 MergeRequest 的时候，构建 airflow 的 DAG，在 airflow DAG 中，每个 dbt task 执行一个 dbt model，执行命令 <code>dbt run --select {model_name}</code>
+自 2025-06-09 开始，出现部份 model 出现 spark-session 长时间无法启动的情况，直到 airflow task timeout</p>
+<p>初步排查，可能会出现 Spark Application ID 重复的情况，根据 <a href="../Spark%20Application%20ID%20%E5%BC%95%E5%8F%91%E7%9A%84%E6%83%A8%E6%A1%88/">Spark Application ID 引发的惨案</a> 重新组织了一遍 Spark Application ID, 确认不可能再
+出现重复的情况后上线
+结果第二天还是出现了相同的问题，只是概率许多。
+把日志切换成 info 模式，也没看到打日志的情况。</p>
+<p>我们的 Spark 是 Spark on K8S perjob 模式，每个 Job 都是 on aliyun ECI, 跑完之后，eci instance 就清理的。</p>
+<p>我们白天少量重跑，无法复现，但是通过观察 ECI 的资源利用率，发现在 DBT 的 compile 阶段，pod 的CPU 利用率已经达到 100%，初步排查大概率是 compile 阶段 CPU 没有及时释放，导致在启动 Spark Driver
+的时候，获取不到 CPU，我们给每个 dbt task 的资源是 1核4G，显然如果 compile 阶段资源不释放的话，就会出现 driver 拿不到资源，无法启动的问题</p>
+<p>2025-06-19 开始将 dbt submit pod 的规格升级为 2核8G 之后，compile 的 CPU 资源利用率降低到了 70，截止到 2025-06-26， 不再出现 Driver 起不来的情况。</p>
+<p>总结：dbt compile 有点坑，可能需要优化，不然后面任务量过多，会导致 CPU利用率飙升，每次都调用 <code>show table extended in {database} like '*'</code>, HMS 扛不住 dbt compile/run 的冲击</p>
 
     <!-- Last update of source file -->
     
@@ -1407,7 +1310,7 @@ as the main headline.
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2025-02-24 12:17:27</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2025-06-26 07:19:53</span>
   </span>
 
     
@@ -1417,7 +1320,7 @@ as the main headline.
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2025-02-24 12:17:27</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime">2025-06-26 07:19:53</span>
   </span>
 
     
@@ -1501,7 +1404,7 @@ as the main headline.
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../Could%20not%20resolve%20host%3A%20mirrorlist.centos.org%3B%20Unknown%20error/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Could not resolve host: mirrorlist.centos.org; Unknown error">
+          <a href="../Spark%20Application%20ID%20%E5%BC%95%E5%8F%91%E7%9A%84%E6%83%A8%E6%A1%88/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Spark Application ID 引发的惨案">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1511,20 +1414,20 @@ as the main headline.
                 上一页
               </span>
               <div class="md-ellipsis">
-                Could not resolve host: mirrorlist.centos.org; Unknown error
+                Spark Application ID 引发的惨案
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Spark%20Application%20ID%20%E5%BC%95%E5%8F%91%E7%9A%84%E6%83%A8%E6%A1%88/" class="md-footer__link md-footer__link--next" aria-label="下一页: Spark Application ID 引发的惨案">
+          <a href="../redis%E4%B8%8D%E9%87%8A%E6%94%BE%E5%AF%BC%E8%87%B4%E7%9A%84%E5%86%85%E5%AD%98%E5%8D%A0%E6%BB%A1/" class="md-footer__link md-footer__link--next" aria-label="下一页: Redis不释放导致的内存占满">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Spark Application ID 引发的惨案
+                Redis不释放导致的内存占满
               </div>
             </div>
             <div class="md-footer__button md-icon">
